@@ -1,4 +1,5 @@
 # Getting_and_Cleaning_Data
+## Course Project
 
 The script run_Analysis.R imports and cleans the UCI HAR dataset.
 The script performs the following operations:
@@ -13,7 +14,7 @@ The script performs the following operations:
 
 5) Matches activity labels to the list of activities using for loops and inserts the labels into MeansAndStandardDeviations
 
-6) Cleans the measurement data variable names (FeaturesCleaned) by replacing parentheses and commas with periods, making all letters lowercase, and expanding time and frequency markers
+6) Cleans the measurement data variable names (FeaturesCleaned) by using gsub to replace parentheses and commas with periods, making all letters lowercase, and expanding time and frequency markers
 
 7) Replaces the measurement data column names with the descriptive names in FeaturesCleaned
 
