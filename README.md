@@ -14,7 +14,7 @@ The script performs the following operations:
 
 5) Matches activity labels to the list of activities using for loops and inserts the labels into MeansAndStandardDeviations
 
-6) Cleans the measurement data variable names (FeaturesCleaned) by using gsub to replace parentheses and commas with periods, making all letters lowercase, and expanding time and frequency markers
+6) Cleans the measurement data variable names (FeaturesCleaned) by using a sequence of gsub stateemnts to replace parentheses and commas with periods, making all letters lowercase, and expanding time and frequency markers
 
 7) Replaces the measurement data column names with the descriptive names in FeaturesCleaned
 
@@ -22,5 +22,5 @@ The script performs the following operations:
 
 9) Creates a tidy dataset containing the averages of each variable by subject and activity and places it in the variable TidyData
 
-10) Outputs the TidyData dataset to a CSV file
+10) Outputs the TidyData dataset to a text file using write.table with row.names = FALSE
 
