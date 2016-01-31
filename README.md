@@ -17,5 +17,9 @@ The script performs the following operations:
 
 7) Replaces the measurement data column names with the descriptive names in FeaturesCleaned
 
-8) Uses the group_by function from the dplyr package to grouped the data by subject, then by activity 
+8) Uses the group_by function from the dplyr package to grouped the data by subject, then by activity and places the resulting data in the variable GroupedData
+
+9) Creates a tidy dataset containing the averages of each variable by subject and activity and places it in the variable TidyData
+
+10) Outputs the TidyData dataset to a CSV file
 
