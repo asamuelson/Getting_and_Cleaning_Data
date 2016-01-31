@@ -9,8 +9,13 @@ The script performs the following operations:
 
 3) Combines the training and test data into one dataset called CombinedData
 
-4) Extracts the columns which contain means or standard deviations from the combined dataset and creates a new dataset called MeansAndStandardDeviations
+4) Extracts the columns (MeansAndStandardDeviationCols) which contain means or standard deviations from the combined dataset and creates a new dataset called MeansAndStandardDeviations
 
 5) Matches activity labels to the list of activities using for loops and inserts the labels into MeansAndStandardDeviations
 
-6) Cleans the variable (feature) names by replacing parentheses and commas with periods, making all letters lowercase,  
+6) Cleans the measurement data variable names (FeaturesCleaned) by replacing parentheses and commas with periods, making all letters lowercase, and expanding time and frequency markers
+
+7) Replaces the measurement data column names with the descriptive names in FeaturesCleaned
+
+8) Uses the group_by function from the dplyr package to grouped the data by subject, then by activity 
+
