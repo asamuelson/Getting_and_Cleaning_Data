@@ -1,4 +1,4 @@
-Variable names for the raw data:
+#Variable names for the raw data:
 
 SubjectTrain 	- the subject information for the training dataset (imported from subject_train.txt)
 YTrain 		- the activity ID information for the test dataset (imported from Y_train.txt)
@@ -9,7 +9,7 @@ XTest 		- the measurement data for the test dataset (imported from X_test.txt)
 Features 	- the list of measurements (imported from features.txt)
 ActivityLabels 	- the mapping from the activity IDs to descriptive names for the activities (imported from activity_labels.txt)
 	
-Transformations from raw data to combined data:
+#Transformations from raw data to combined data:
 
 1) combine columns for the subject, activity ID, and measurement data for the training data using cbind
 2) combine columns for the subject, activity ID, and measurement data for the test data using cbind
@@ -19,7 +19,7 @@ Transformations from raw data to combined data:
 6) clean the variable names to expand time and frequency indicators, replace commas and parentheses with periods, remove extra periods, and change all letters to lowercase using gsub
 7) update the column names of the combined dataset with descriptive names
   
-Variable names for the combined data:
+#Variable names for the combined data:
 
 TrainData 			- the combined columns of SubjectTrain, YTrain, and XTrain 
 TestData			- the combined columns of SubjectTest, YTest, and XTest
@@ -29,13 +29,13 @@ MeansAndStandardDeviations 	- the subset of CombinedData containing only the col
 GroupedData 			- the data in MeansAndStandardDeviations, grouped by subject and then by activity
 TidyData 			- the tidy dataset containing the average values for each subject-activity combination
 
-Transformations from combined data to tidy data:
+#Transformations from combined data to tidy data:
 
 1) group the combined data by subject and activity
 2) calculate the means for each variable by subject and activity
 3) output the tidy data to a text file  
 
-Variable names for the tidy dataset:
+#Variable names for the tidy dataset:
 
 subject 			- the subject ID (integer)                              
 activity 			- the activity name (character string)                            
